@@ -1,8 +1,53 @@
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* specific font */ 
+@font-face { font-family: arcade; src: url('fonts/PressStart2P-Regular.ttf'); } 
+
+
+body {
+  background-color: black;
+  padding: 0px; 
+  margin: 0px; 
+  justify-content: center;
+  align-items: center;
+  width: 100vw; 
+  height: 100vh;
+  font-family: 'arcade';
+
+}
+
+.container {
+  width: 800px;
+  max-width: 80%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px;
+  gap: 40px;
+}
+
+
+.btn-grid {
+  display: grid; 
+  grid-template-columns: repeat(2, auto);
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+.btn {
+  background-color: grey;
+  border: 1px solid; 
+  border-radius: 5px; 
+  padding: 5px 10px; 
+  color: white; 
+  outline: none; 
+  width: 300px;
+  height: 60px;
+}
+
+.btn:hover {
+  border-color: black;
 }
