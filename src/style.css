@@ -16,17 +16,27 @@ body {
   width: 100vw; 
   height: 100vh;
   font-family: 'arcade';
+  display: flex;
 
 }
 
+
 .container {
-  width: 800px;
+  justify-content: center;
+  width: 900px;
+  height: 700px;
   max-width: 80%;
   background-color: white;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px;
   gap: 40px;
+}
+
+.text {
+  margin: 10px;
+  gap: 10px;
+  padding: 10px 2px;
 }
 
 

@@ -1,75 +1,71 @@
 
 
 import './style.css'
-import { nextStep } from './styles/types';
+//import { nextStep } from './styles/types';
 import { gameDataList } from './gameData';
 
 
 const textElement = document.querySelector(".text") as HTMLElement | null | undefined
-const optionButtonsElement = document.querySelector('#options') as HTMLInputElement | null | undefined
-
-console.log(gameDataList); 
-console.log(gameDataList[1].story)
+const choiceOne = document.getElementById('left') as HTMLElement
+const choiceTwo = document.querySelector('#right') as HTMLElement 
 
 
 
+let gameStep = gameDataList[0]
+//console.log(gameStep)
 
-for(let i=0; i < gameDataList.length; i++){
-  console.log(gameDataList[i].id)
-  if(gameDataList[i]. id == 1){
-    textElement!.innerHTML = gameDataList[i].story
- 
-    }
-    optionButtonsElement!.innerHTML = gameDataList[i].story
+function game(this: HTMLElement, event: MouseEvent) : void {
+  let step: number = 1; 
+  if(this.id == 'left') {
+    //console.log('hej')
+    step = gameStep.choices.one.path
+    //console.log(step)
+  }else if(this.id == 'right') {
+    //console.log('howdy')
+    step = gameStep.choices.two.path
+    //console.log(step)
+  }else{
+    console.log('error'); 
   }
 
+  const foundPath = gameDataList.find( function (nextStep) {
+    return nextStep.id == step;  
 
+  })
 
-/* function helloWorld() {
-  const element= document.getElementById("options");
+  if(foundPath){
+   gameStep = foundPath; 
+   render(); 
   
-  if (optionButtonsElement) {
-  optionButtonsElement.innerHTML = "Hello, World!";
+}
+}
+
+function render() {
+  if(gameStep.story){
+    textElement!.innerText = gameStep.story;
+  }
+  if(gameStep.choices.one){
+    choiceOne.innerText = gameStep.choices.one.text;
+
+  }
+  if(gameStep.choices.two){
+    choiceTwo.innerText = gameStep.choices.two.text
   }
 }
-helloWorld();
-
- */
 
 
-/* 
-  console.log(nextSteps[0].story)
+// buttons to click
+choiceOne.addEventListener("click", game)  
+choiceTwo.addEventListener("click", game) 
 
-  if(optionButtonsElement){
-  optionButtonsElement!.innerHTML = nextSteps[0].story;
-  } */
 
-/* 
-  abstract class Person {
-    constructor(firstName:string, lastName:string) {
 
-      this.firstName = firstName
-      this.lastName = lastName
-      //this.SSN = SSN 
-    }
-    protected firstName: string
-    protected lastName: string 
-    //private SSN: number
-
-    abstract getDateOfBith: () => string
-   
-    }
-
-  class Student extends Person {
-    constructor(firstName: string, lastName: string, SSN:string)
-    super(firstName, lastName)
-    this.SSN = SSN; 
-  }
-    private SSN: string
-    getDateOfBirth: () => string = () => {
-      return this.SSN.toString().split("-")[0];
-    }
-
-  const newPerson = new Person('hanna', 'nymåne', '233244'); 
+function init(): void {
   
-  newPerson.getDateOfBirth();  */
+  render()
+}
+
+
+
+init()
+

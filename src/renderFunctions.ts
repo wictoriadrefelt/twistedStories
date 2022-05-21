@@ -1,5 +1,8 @@
-import { gameStep } from "./styles/types"
+import { Step } from "./styles/types"
 
-export const renderGameStep: (gameStep: gameStep) => void = (gameStep) => {
+export const renderGameStep: (gameStep: Step) => void = (gameStep) => {
 //render gamestep 
 }
+
+
+
