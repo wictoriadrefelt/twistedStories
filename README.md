@@ -1,12 +1,10 @@
-Small text-based adventure game 
-
 
 Title: Dark forest
 
 Description: Small text-based MUD 
 
 Installation and how to run: 
-Clone repo and run 'npm install' in terminal, after installation is complete type command 'npm run dev'
+Clone repo and run 'npm install' in terminal, after installation is complete type command 'npm run dev' and open on designated port. 
 
 List of demands: 
 1.Git & GitHub har använts
