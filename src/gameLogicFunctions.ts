@@ -1,5 +1,5 @@
 
-/*  what next step? 
-import { gameStep } from "./styles/types"
 
-export let currentStep: gameStep = undefined */
+export const AudioPlay = (file: HTMLAudioElement | string) => {
+    new Audio(`/src/${file}`).play();    //under folder public
+  };

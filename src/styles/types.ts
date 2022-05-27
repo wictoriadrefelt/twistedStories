@@ -5,16 +5,24 @@ export interface Step {
     story: string, 
     choices: {
       one: Options 
-      two: Options
-    }
-    soundEffect? : Sound; 
+      two: Options,
+    },
+    soundEffect?: {
+      pathToUrl: string;
+      //ifSet: boolean
+    },
+    soundEffect2?: {
+      pathToUrl: string;
+    
   }
+  img?: string;
+}
 
   export interface Options {
     text: string, 
-    path: number
+    path: number;
   }
 
   export interface Sound {
-    url: string; 
+    pathToUrl: string; 
   }

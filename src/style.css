@@ -39,6 +39,29 @@ body {
   padding: 10px 2px;
 }
 
+.scare {
+  visibility: hidden;
+}
+
+
+.hidden {
+  visibility: hidden;
+}
+
+
+.imagecont {
+  display: flex;
+  height: 300px;
+  width: 300px;
+  
+}
+
+.stag {
+  justify-content: center;
+  height: 300px;
+  width: 300px;
+}
+
 
 .btn-grid {
   display: grid; 

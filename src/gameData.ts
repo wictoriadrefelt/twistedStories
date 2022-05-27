@@ -14,7 +14,14 @@ id: 2,
     choices: {
         one: {text: 'Start over', path: 1},
         two: {text: '', path: 1}
-    }
+    },
+    soundEffect2: {
+        pathToUrl: './src/creakingDoorSound.mp3'
+    },
+    soundEffect: {
+        pathToUrl: 'well never mind'
+    }, 
+    img : './src/assets/forTwisted.jpg'
 },
 {
     id: 3, 
@@ -55,7 +62,8 @@ id: 2,
                             choices: {
                             one: {text: 'Follow the creature', path: 8},
                             two: {text: 'Stay in the glade ', path: 9}
-                        }
+                        },
+                        img : './src/assets/forTwisted-stag.jpg'
                     },
                     {
                         id: 8, 
@@ -63,6 +71,9 @@ id: 2,
                                                       choices: {
                                 one: {text: 'Start over', path: 1},
                                 two: {text: '', path: 1}
+                            },
+                            soundEffect: {
+                                pathToUrl: './src/scare.wav',
                             }
                         },
     
@@ -71,12 +82,12 @@ id: 2,
                             story: "The sight of the creature moving away made you earie. \n You decide to not follow it as you watch it leave. \n You look towards the ground where the creature just stood. Something lies there.  ",
                                 choices: {
                                 one: {text: 'investigate object', path: 10},
-                                two: {text: 'leave it', path: 1}
+                                two: {text: '', path: 1}
                             }
                         },
                         {
                             id: 10, 
-                                story: "Where the creature stood lies some form of compass. \n You remember. Something. But it wont spin as you move? Is it broken? Or is the fault not with the compass, rather than with this place? \n Somehow it feels like nothing normal would be as it would be here. You start walking towards where the arrow points although you don't see the point. But what else is there? \n What now. Nothing.", 
+                                story: "Where the creature stood lies some form of compass. \n You remember. \n Something. But it wont spin as you move? Is it broken? Or is the fault not with the compass, rather than with this place? \n Somehow it feels like nothing normal would be as it would be here. You start walking towards where the arrow points although you don't see the point. But what else is there? \n What now. Nothing.", 
                                       choices: {
                                     one: {text: 'Continue', path: 11},
                                     two: {text: '', path: 11}
